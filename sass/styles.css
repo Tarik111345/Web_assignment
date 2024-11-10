@@ -1,0 +1,24 @@
+body {
+  background-color: #6F4F37;
+  background-image: url(coffee-image.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #D2B48C;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #D2B48C;
+}
+
+.navbar {
+  background-color: #3d2b1c;
+  border-bottom: 2px solid #D2B48C;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+}
+.navbar-nav .nav-link:hover {
+  color: #D2B48C;
+}/*# sourceMappingURL=styles.css.map */
