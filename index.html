@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="sass/styles.css">
 </head>
-<body> 
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -18,7 +18,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navabrNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
@@ -29,24 +29,46 @@
             </div>
         </nav>
     </header>
-
-    <main>
-        <section id="welcome">
-            <h1>Welcome to Café Hadro</h1>
-            <p>Experience the finest coffee crations in town with a touch of elegance and local charm. Join us for a cup of coffee and make every moment special</p>
-            <img src="cafe_hadro.jpg" width="400" height="400" alt="Café Hadro">
-        </section>
-
-        <section id="about">
-            <h2>About us</h2>
-            <p>Café Hadro is your go-to spot for exquiste coffee and delightful ambience. We blend tradition with modern flavors</p>
-        </section>
-
-        <section id="specials">
-            <h2>Our Specials</h2>
-            <p>Discover our unique coffee blends and seasonal specials. Each cup is crafted with passion and precision!</p>
-            <img src="specials.jpg" width="300" height="300" alt="Our Specials">
-        </section>        
+    <section id="welcome" class="text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Café Hadro</h1>
+            <p class="lead text-secondary mb-4">Experience the finest coffee creations in town with a touch of elegance and local charm. Join us for a cup of coffee and make every moment special.</p>
+            <img src="cafe_hadro.jpg" class="img-fluid rounded-circle shadow-lg" alt="Café Hadro" style="max-width: 400px;">
+        </div>
+    </section>
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-wrapper d-flex overflow-auto py-3">
+                
+                <div class="testimonial-card mx-3">
+                    <p>"The best coffee in Sarajevo! The atmosphere is warm and inviting, and the staff is so friendly!"</p>
+                    <footer class="blockquote-footer">Fadil Manopita</footer>
+                </div>
+                
+                <div class="testimonial-card mx-3">
+                    <p>"I love the unique blends at Café Hadro. Every cup is a new experience!"</p>
+                    <footer class="blockquote-footer">Tarik Tufo</footer>
+                </div>
+                
+                <div class="testimonial-card mx-3">
+                    <p>"A perfect spot to relax and enjoy a great cup of coffee. Highly recommend!"</p>
+                    <footer class="blockquote-footer">Mirza Cakal</footer>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="events" class="py-5">
+        <div class="container">
+            <h2>Upcoming Events & Promotions</h2>
+            <ul>
+                <li><strong>Happy Hour:</strong> Enjoy 2 for 1 on all coffee drinks from 3 PM to 5 PM every weekday!</li>
+                <li><strong>Live Music Nights:</strong> Join us for live performances every Friday and Saturday evening.</li>
+                <li><strong>Seasonal Coffee Blends:</strong> Try our new pumpkin spice latte this fall!</li>
+            </ul>
+        </div>
+    </section>       
     </main>
 
     <footer>
@@ -54,6 +76,6 @@
         <p>Follow us on <a href="https://instagram.com/cafehadro">Instagram</a> | <a href="https://twitter.com/cafehadro">Twitter</a></p>
     </footer>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

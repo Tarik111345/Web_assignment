@@ -1,13 +1,13 @@
-$primary-color: #6F4F37;
+$primary-color: #422e20;
 $secondary-color: #D2B48C;
 
 body {
     background-color: $primary-color;
-    background-image: url(coffee-image.jpg);
     background-size: cover;
     background-position: center;
     color: $secondary-color;
     font-family: Arial, sans-serif;
+
 }
 
 h1, h2, h3 {
@@ -15,7 +15,7 @@ h1, h2, h3 {
 }
 
 .navbar {
-    background-color: #3d2b1c;
+    background-color: #362619;
     border-bottom: 2px solid $secondary-color;
 }
 
@@ -25,6 +25,7 @@ h1, h2, h3 {
         color: $secondary-color;
     }
 }
+
 
 
 
