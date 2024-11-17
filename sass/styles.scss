@@ -1,0 +1,31 @@
+$primary-color: #422e20;
+$secondary-color: #D2B48C;
+
+body {
+    background-color: $primary-color;
+    background-size: cover;
+    background-position: center;
+    color: $secondary-color;
+    font-family: Arial, sans-serif;
+
+}
+
+h1, h2, h3 {
+    color: $secondary-color;
+}
+
+.navbar {
+    background-color: #362619;
+    border-bottom: 2px solid $secondary-color;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+
+
+
