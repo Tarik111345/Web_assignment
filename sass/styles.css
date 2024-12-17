@@ -193,3 +193,80 @@ footer a:hover {
   background-color: #f3e5e5; 
   transition: background-color 0.3s ease-in-out; 
 }
+
+
+
+.coffee-theme {
+  background-color: #3e2a47;
+  color: #fff;
+}
+
+.dark-blue-theme {
+  background-color: #1f3b4d; 
+  color: #fff;
+}
+
+button#theme-toggle {
+  color: white;
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button#theme-toggle:hover {
+  background-color: #555;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+#theme-toggle {
+  margin-left: auto;
+}
+
+#menu-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+#modalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-dialog {
+  max-width: 50%;
+  margin: 1.75rem auto;
+}
+
+.modal-body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
