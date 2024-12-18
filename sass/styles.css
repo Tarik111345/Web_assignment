@@ -268,5 +268,90 @@ header {
 }
 
 
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8b5e3c;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #8b5e3c;
+}
+
+.accordion-content {
+  padding: 0 15px;
+  background-color: #555;
+  max-height: 0; 
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-button.active {
+  background-color: #8b5e3c;
+}
+
+.accordion-content p {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+
+#password-strength {
+  height: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#password-strength.weak {
+  background-color: red;
+}
+
+#password-strength.medium {
+  background-color: yellow;
+}
+
+#password-strength.strong {
+  background-color: green;
+}
+
+.error-message {
+  color: red;
+  display: none;
+  font-size: 12px;
+}
 
 
