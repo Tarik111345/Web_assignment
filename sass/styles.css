@@ -457,3 +457,29 @@ button:hover {
   border: none;
 }
 
+#weather-widget {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 400px;
+  background-color: #1aff40;
+}
+
+#weather-widget h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+#weather {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+#weather img {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+

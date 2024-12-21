@@ -257,3 +257,72 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('No form on this page.');
     }
 });
+
+
+//Edit and Delete option and the Notifications
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.edit-btn').forEach(button => {
+        button.addEventListener('click', editItem);
+    });
+
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', deleteItem);
+    });
+});
+
+function editItem(event) {
+    const itemId = event.target.getAttribute('data-id');
+    const row = document.getElementById(`item-${itemId}`);
+    const itemName = row.cells[0].textContent;
+    const itemPrice = row.cells[2].textContent;
+
+    const newName = prompt('Edit item name:', itemName);
+    const newPrice = prompt('Edit price:', itemPrice);
+
+    if (newName && newPrice) {
+        row.cells[0].textContent = newName;
+        row.cells[2].textContent = newPrice;
+
+        toastr.success('Item edited successfully!');
+    } else {
+        toastr.error('Edit operation cancelled or invalid input.');
+    }
+}
+
+function deleteItem(event) {
+    const itemId = event.target.getAttribute('data-id');
+    const row = document.getElementById(`item-${itemId}`);
+
+    const confirmed = confirm('Are you sure you want to delete this item?');
+    if (confirmed) {
+        row.remove(); 
+
+        toastr.success('Item deleted successfully!');
+    } else {
+        toastr.error('Item deletion cancelled.');
+    }
+}
+
+// Weather API Integration
+const apiKey = 'de32092b480573171c5c3f9ce1bb4f2a'; 
+const city = 'Sarajevo'; 
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch weather data');
+        }
+        return response.json();
+    })
+    .then(data => {
+        const temperature = data.main.temp;
+        const description = data.weather[0].description;
+        const icon = data.weather[0].icon;
+
+        const weatherElement = document.getElementById('weather');
+        weatherElement.innerHTML = `${temperature}°C, ${description} <img src="https://openweathermap.org/img/wn/${icon}.png" alt="weather icon">`;
+    })
+    .catch(error => {
+        document.getElementById('weather').textContent = "Weather data not available: " + error.message;
+    });
