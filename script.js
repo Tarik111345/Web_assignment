@@ -9,17 +9,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Interactive gallery
-    document.querySelectorAll('.menu-item img').forEach(item => {
-        item.addEventListener('click', event => {
-            const imageSrc = event.target.src;
-            const modalImage = document.getElementById('modalImage');
-            if (modalImage) { 
-                modalImage.src = imageSrc;
-                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-                modal.show();
-            }
-        });
-    });
+const cards = document.querySelectorAll('.card');
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const caption = document.getElementById('caption');
+const closeButton = document.querySelector('.close');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const fullImage = card.getAttribute('data-full');
+    const title = card.querySelector('.card-title').textContent;
+
+    modal.style.display = 'flex';
+    modalImage.src = fullImage;
+    caption.textContent = title;
+  });
+});
+
+closeButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+  modalImage.src = '';
+  caption.textContent = '';
+});
+
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+    
 
     // Content toggle
     const contentToggleButton = document.getElementById("content-toggle");
@@ -326,3 +345,42 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
     .catch(error => {
         document.getElementById('weather').textContent = "Weather data not available: " + error.message;
     });
+    
+
+//View more
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('viewMoreEspresso').addEventListener('click', function () {
+        var modalTitle = document.querySelector('#viewMoreModal .modal-title');
+        var modalBody = document.querySelector('#viewMoreModal .modal-body');
+
+        modalTitle.textContent = 'Espresso';
+        modalBody.innerHTML = `
+            <img src="espresso.jpg" alt="Espresso" class="img-fluid rounded mb-3">
+            <p><strong>Description:</strong> A strong and rich coffee made from finely ground coffee beans.</p>
+            <p><strong>Price:</strong> $2.50</p>
+            <p><strong>Ingredients:</strong> Espresso coffee beans, water.</p>
+            <p><strong>Serving Size:</strong> Single Shot (1 oz)</p>
+            <p><strong>Calories:</strong> 5</p>
+        `;
+        var modal = new bootstrap.Modal(document.getElementById('viewMoreModal'));
+        modal.show();
+    });
+
+    document.getElementById('viewMoreLatte').addEventListener('click', function () {
+        var modalTitle = document.querySelector('#viewMoreModal .modal-title');
+        var modalBody = document.querySelector('#viewMoreModal .modal-body');
+
+        modalTitle.textContent = 'Latte';
+        modalBody.innerHTML = `
+            <img src="latte.jpg" alt="Latte" class="img-fluid rounded mb-3">
+            <p><strong>Description:</strong> A creamy espresso-based drink with steamed milk and foam.</p>
+            <p><strong>Price:</strong> $3.50</p>
+            <p><strong>Ingredients:</strong> Espresso, steamed milk, foam.</p>
+            <p><strong>Serving Size:</strong> 8 oz</p>
+            <p><strong>Calories:</strong> 120</p>
+        `;
+        var modal = new bootstrap.Modal(document.getElementById('viewMoreModal'));
+        modal.show();
+    });
+});
+

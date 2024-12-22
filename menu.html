@@ -42,10 +42,13 @@
                 <div class="col-md-3 text-center menu-item">
                     <img src="espresso.jpg" alt="Espresso" class="img-fluid rounded">
                     <p><strong>Espresso</strong> - $2.50</p>
-                </div>
+                    <button class="btn btn-info" id="viewMoreEspresso" data-toggle="modal" data-target="#viewMoreModal">View More</button>
+                </div>                
                 <div class="col-md-3 text-center menu-item">
                     <img src="latte.jpg" alt="Latte" class="img-fluid rounded">
                     <p><strong>Latte</strong> - $3.50</p>
+<button class="btn btn-info" id="viewMoreLatte" data-toggle="modal" data-target="#viewMoreModal">View More</button>
+
                 </div>
                 <div class="col-md-3 text-center menu-item">
                     <img src="cappuccino.jpg" alt="Cappuccino" class="img-fluid rounded">
@@ -168,19 +171,28 @@
         
         </section>
     </main>
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="imageModalLabel">Image View</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-              <img src="" id="modalImage" class="img-fluid" alt="Modal Image">
-            </div>
-          </div>
+<div class="modal fade" id="viewMoreModal" tabindex="-1" aria-labelledby="viewMoreModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewMoreModalLabel">Espresso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="espresso.jpg" alt="Espresso" class="img-fluid rounded mb-3">
+          <p><strong>Description:</strong> A strong and rich coffee made from finely ground coffee beans.</p>
+          <p><strong>Price:</strong> $2.50</p>
+          <p><strong>Ingredients:</strong> Espresso coffee beans, water.</p>
+          <p><strong>Serving Size:</strong> Single Shot (1 oz)</p>
+          <p><strong>Calories:</strong> 5</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
+    </div>
+  </div>
+  
 
     <footer>
         <p>&copy; 2023 Café Hadro. All rights reserved.</p>
