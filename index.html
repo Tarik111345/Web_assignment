@@ -15,6 +15,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">Café Hadro</a>
+                <button id="theme-toggle" class="btn btn-outline-light">Toggle Theme</button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,6 +30,7 @@
             </div>
         </nav>
     </header>
+
     <section id="welcome" class="text-center py-5">
         <div class="container">
             <h1 class="display-4">Welcome to Café Hadro</h1>
@@ -36,6 +38,12 @@
             <img src="cafe_hadro.jpg" class="img-fluid rounded-circle shadow-lg" alt="Café Hadro" style="max-width: 400px;">
         </div>
     </section>
+    
+    <div id="weather-widget">
+        <h2>Current Weather in Sarajevo</h2>
+        <p id="weather"></p>
+    </div>
+    
     <section id="testimonials" class="py-5">
         <div class="container">
             <h2>What Our Customers Say</h2>
@@ -58,18 +66,35 @@
             </div>
         </div>
     </section>
-    
-    <section id="events" class="py-5">
+
+    <section id="blog-section" class="py-5">
         <div class="container">
-            <h2>Upcoming Events & Promotions</h2>
-            <ul>
-                <li><strong>Happy Hour:</strong> Enjoy 2 for 1 on all coffee drinks from 3 PM to 5 PM every weekday!</li>
-                <li><strong>Live Music Nights:</strong> Join us for live performances every Friday and Saturday evening.</li>
-                <li><strong>Seasonal Coffee Blends:</strong> Try our new pumpkin spice latte this fall!</li>
-            </ul>
+            <h2>From Our Blog</h2>
+            <div id="blog-posts" class="row">
+
+            </div>
         </div>
-    </section>       
-    </main>
+    </section>
+    
+    <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
 
     <footer>
         <p>&copy; 2023 Café Hadro. All rights reserved.</p>
@@ -77,5 +102,7 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

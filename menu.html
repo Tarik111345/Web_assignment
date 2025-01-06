@@ -8,6 +8,7 @@
     <title>Menu | Café</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="sass/styles.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">Café Hadro</a>
+                <button id="theme-toggle" class="btn btn-outline-light">Toggle Theme</button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,10 +42,13 @@
                 <div class="col-md-3 text-center menu-item">
                     <img src="espresso.jpg" alt="Espresso" class="img-fluid rounded">
                     <p><strong>Espresso</strong> - $2.50</p>
-                </div>
+                    <button class="btn btn-info" id="viewMoreEspresso" data-toggle="modal" data-target="#viewMoreModal">View More</button>
+                </div>                
                 <div class="col-md-3 text-center menu-item">
                     <img src="latte.jpg" alt="Latte" class="img-fluid rounded">
                     <p><strong>Latte</strong> - $3.50</p>
+<button class="btn btn-info" id="viewMoreLatte" data-toggle="modal" data-target="#viewMoreModal">View More</button>
+
                 </div>
                 <div class="col-md-3 text-center menu-item">
                     <img src="cappuccino.jpg" alt="Cappuccino" class="img-fluid rounded">
@@ -117,41 +122,89 @@
 
             
 
-    <div class="row">
-        <div class="col-12">
-            <h2 class="text-center">Week's Specials</h2>
-            <table class="table-specials" class="table table-striped">
-                <tr>
-                    <th>Item</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                
-                </tr>
-                <tr>
-                    <td>Pumpkin Spice Latte</td>
-                    <td>Seasonal special with a hint of pumpkin and spice</td>
-                    <td>$4.00</td>
-                </tr>
-                <tr>
-                    <td>Caramel Macchiato</td>
-                    <td>A sweet and creamy caramel-flavored coffee</td>
-                    <td>$4.25</td>
-                </tr>
-                <tr>
-                    <td>Matcha Latte</td>
-                    <td>Refreshing green tea latte with creamy finish</td>
-                    <td>$4.50</td>
-                </tr>
-            </table>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center">Week's Specials</h2>
+                <table class="table-specials table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="item-1">
+                            <td>Pumpkin Spice Latte</td>
+                            <td>Seasonal special with a hint of pumpkin and spice</td>
+                            <td>$4.00</td>
+                            <td>
+                                <button class="edit-btn" data-id="1">Edit</button>
+                                <button class="delete-btn" data-id="1">Delete</button>
+                            </td>
+                        </tr>
+                        <tr id="item-2">
+                            <td>Caramel Macchiato</td>
+                            <td>A sweet and creamy caramel-flavored coffee</td>
+                            <td>$4.25</td>
+                            <td>
+                                <button class="edit-btn" data-id="2">Edit</button>
+                                <button class="delete-btn" data-id="2">Delete</button>
+                            </td>
+                        </tr>
+                        <tr id="item-3">
+                            <td>Matcha Latte</td>
+                            <td>Refreshing green tea latte with creamy finish</td>
+                            <td>$4.50</td>
+                            <td>
+                                <button class="edit-btn" data-id="3">Edit</button>
+                                <button class="delete-btn" data-id="3">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+        
+        <div id="success-message" style="display:none;"></div>
+        
         </section>
     </main>
+<div class="modal fade" id="viewMoreModal" tabindex="-1" aria-labelledby="viewMoreModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewMoreModalLabel">Espresso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="espresso.jpg" alt="Espresso" class="img-fluid rounded mb-3">
+          <p><strong>Description:</strong> A strong and rich coffee made from finely ground coffee beans.</p>
+          <p><strong>Price:</strong> $2.50</p>
+          <p><strong>Ingredients:</strong> Espresso coffee beans, water.</p>
+          <p><strong>Serving Size:</strong> Single Shot (1 oz)</p>
+          <p><strong>Calories:</strong> 5</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
     <footer>
         <p>&copy; 2023 Café Hadro. All rights reserved.</p>
         <p>Follow us on <a href="https://instagram.com/cafehadro">Instagram</a> | <a href="https://twitter.com/cafehadro">Twitter</a></p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="script.js"></script>
+
+
+  
 </body>
 </html>

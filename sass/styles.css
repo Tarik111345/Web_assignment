@@ -193,3 +193,431 @@ footer a:hover {
   background-color: #f3e5e5; 
   transition: background-color 0.3s ease-in-out; 
 }
+
+
+
+.coffee-theme {
+  background-color: #3e2a47;
+  color: #fff;
+}
+
+.dark-blue-theme {
+  background-color: #1f3b4d; 
+  color: #fff;
+}
+
+button#theme-toggle {
+  color: white;
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button#theme-toggle:hover {
+  background-color: #555;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+#theme-toggle {
+  margin-left: auto;
+}
+
+#menu-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+#modalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-dialog {
+  max-width: 50%;
+  margin: 1.75rem auto;
+}
+
+.modal-body {
+  padding: 0;
+  margin: 0;
+}
+
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8b5e3c;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #8b5e3c;
+}
+
+.accordion-content {
+  padding: 0 15px;
+  background-color: #555;
+  max-height: 0; 
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-button.active {
+  background-color: #8b5e3c;
+}
+
+.accordion-content p {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+
+#password-strength {
+  height: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#password-strength.weak {
+  background-color: red;
+}
+
+#password-strength.medium {
+  background-color: yellow;
+}
+
+#password-strength.strong {
+  background-color: green;
+}
+
+.error-message {
+  color: red;
+  display: none;
+  font-size: 12px;
+}
+
+
+
+#blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+
+.card {
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.read-more-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 454px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+#readMoreModal .modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#readMoreModal .post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#readMoreModal .post-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#readMoreModal .post-footer p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+#readMoreModal .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+#readMoreModal .modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#readMoreModal .btn-close {
+  background-color: transparent;
+  border: none;
+}
+
+#weather-widget {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 400px;
+  background-color: #1aff40;
+}
+
+#weather-widget h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+#weather {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+#weather img {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+
+.gallery-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-container .card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container .card:hover {
+  transform: scale(1.05);
+}
+
+.gallery-container .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-container .card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.gallery-container .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-container .modal-content {
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  display: block;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-container #caption {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.gallery-container .close {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.gallery-container .close:hover,
+.gallery-container .close:focus {
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.modal-content {
+  animation: fadeIn 0.5s ease-in-out;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: #343a40; 
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.modal-header .btn-close {
+  color: #fff;
+  opacity: 1;
+}
+
+.modal-body img {
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.5);
+}
