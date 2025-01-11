@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         modalTitle.textContent = 'Espresso';
         modalBody.innerHTML = `
-            <img src="espresso.jpg" alt="Espresso" class="img-fluid rounded mb-3">
+            <img src="../assets/images/espresso.jpg" alt="Espresso" class="img-fluid rounded mb-3">
             <p><strong>Description:</strong> A strong and rich coffee made from finely ground coffee beans.</p>
             <p><strong>Price:</strong> $2.50</p>
             <p><strong>Ingredients:</strong> Espresso coffee beans, water.</p>
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         modalTitle.textContent = 'Latte';
         modalBody.innerHTML = `
-            <img src="latte.jpg" alt="Latte" class="img-fluid rounded mb-3">
+            <img src="../assets/images/latte.jpg" alt="Latte" class="img-fluid rounded mb-3">
             <p><strong>Description:</strong> A creamy espresso-based drink with steamed milk and foam.</p>
             <p><strong>Price:</strong> $3.50</p>
             <p><strong>Ingredients:</strong> Espresso, steamed milk, foam.</p>
