@@ -5,7 +5,7 @@
             "author": "Emir Manso",
             "content": "Discover the secrets behind the perfect brew. Brewing coffee isn't just about using the right beans; it's about creating an experience. From choosing the right grind to mastering the brewing technique, every step plays a role in making that perfect cup of coffee. Whether you're a beginner or an experienced barista, understanding the science behind brewing will elevate your skills.",
             "date": "2024-12-21",
-            "image": "brewing-coffee.jpg",
+            "image": "assets/images/brewing-coffee.jpg",
             "category": "Coffee",
             "tags": ["coffee", "brewing", "tips"]
         },
@@ -15,7 +15,7 @@
             "category": "Lifestyle",
             "content": "Indulge in these delightful pastries that pair perfectly with a cup of espresso. Pastries and coffee share a rich history and a harmonious balance of flavors. From buttery croissants to decadent chocolate cakes, this list will take you through the best options for elevating your coffee experience. Learn which pastries to serve with your next espresso shot for the ultimate indulgence.",
             "date": "2024-12-18",
-            "image": "pastries.jpg",
+            "image": "assets/images/pastries.jpg",
             "tags": ["pastries", "espresso", "food"]
         }
     ]
